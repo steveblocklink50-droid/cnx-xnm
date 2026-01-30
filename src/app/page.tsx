@@ -19,6 +19,7 @@ import Security from '@/components/home/Security';
 import InvestingTips from '@/components/home/InvestingTips';
 import Revenue from '@/components/home/Revenue';
 import Mission from '@/components/home/Mission';
+import ShowcaseUsers from '@/components/home/ShowcaseUsers';
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Navbar />
       <main className="pt-16">
         <Hero />
+        <ShowcaseUsers />
         <Problem />
         <Solution />
         <CoreBusiness />

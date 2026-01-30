@@ -1,4 +1,69 @@
-# NEXIUM-AI - Full DEX Platform
+# NEXIUM-AI Platform
+
+## Overview
+NEXIUM-AI is a comprehensive DeFi platform built on Binance Smart Chain (BSC) offering multiple income streams through crypto mining, staking, trading, and a binary referral system with automatic daily ROI payments.
+
+## 🚀 Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Deploy smart contracts to BSC Testnet
+npx hardhat run contracts/deploy.js --network bscTestnet
+```
+
+## 📋 Features
+
+### Smart Contracts (BEP-20 on BSC)
+- ✅ **NexiumToken (NXM)** - BEP-20 utility token with token allocation
+- ✅ **PackageManager** - Multi-token payment support (BNB, USDT, BUSD, NXM)
+- ✅ **ROIManager** - Automatic daily ROI payments (0.4%-1%)
+- ✅ **ReferralManager** - Binary tree matching with 5% bonus
+- ✅ **RewardLevels** - 10-level progressive rewards (Starter → Genesis)
+- ✅ **PoolManager** - Platform pool for owner withdrawals
+- ✅ **UUPS Upgradeable** - All contracts are upgradeable
+
+### 💰 Income Streams
+1. **Daily ROI** - 0.4% to 1% daily (auto-stops at 2x)
+2. **Direct Referral** - 10% instant commission
+3. **Binary Matching** - 5% on pair matches (unlimited depth)
+4. **Top-up Income** - Restart cycle after 2x cap
+5. **Leadership Rewards** - 10 progressive levels with cash & tokens
+
+### 📦 Investment Packages
+| Package | Amount   | Daily ROI | Daily Earnings |
+|---------|----------|-----------|----------------|
+| I       | $50      | 0.4%      | $0.20/day      |
+| II      | $100     | 0.6%      | $0.60/day      |
+| III     | $500     | 0.75%     | $3.75/day      |
+| IV      | $1000+   | 1.0%      | Custom amount  |
+
+## 🛠 Tech Stack
+
+- **Frontend**: Next.js 14, TypeScript, Tailwind CSS, Framer Motion
+- **Blockchain**: Solidity 0.8.20, Hardhat, OpenZeppelin (Upgradeable)
+- **Wallet**: Wagmi, RainbowKit, viem
+- **Network**: Binance Smart Chain (BSC)
+
+## 📖 Full Documentation
+
+See full README above for:
+- Installation instructions
+- Smart contract deployment
+- Wallet integration
+- Reward levels table
+- Security considerations
+
+---
+
+**⚠️ DISCLAIMER**: DeFi investment platform. Understand risks before participating. Returns are performance-based and not guaranteed.
 
 A next-generation digital asset platform that allows users to earn daily income from crypto mining, staking, and trading.
 

@@ -1,0 +1,65 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IReferralManager",
+  "sourceName": "contracts/RewardLevels.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "referralTree",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "referrer",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "leftChild",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "rightChild",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "leftSubtreeSize",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "rightSubtreeSize",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "matchingBonus",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pairsMatched",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "exists",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
