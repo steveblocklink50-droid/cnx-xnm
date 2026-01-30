@@ -43,8 +43,26 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-primary-500 to-primary-700 rounded-full glow-green">
-                <FaBitcoin className="text-white text-xl" />
+              <div className="w-10 h-10 flex items-center justify-center bg-dark-950 border-2 border-primary-400 rounded-full glow-green">
+                <svg
+                  viewBox="0 0 200 200"
+                  className="w-3/4 h-3/4"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style={{ stopColor: '#22d3ee', stopOpacity: 1 }} />
+                      <stop offset="100%" style={{ stopColor: '#0891b2', stopOpacity: 1 }} />
+                    </linearGradient>
+                  </defs>
+                  {/* N Shape */}
+                  <g>
+                    <line x1="50" y1="140" x2="50" y2="60" stroke="url(#footerLogoGrad)" strokeWidth="12" strokeLinecap="round"/>
+                    <line x1="150" y1="60" x2="150" y2="140" stroke="url(#footerLogoGrad)" strokeWidth="12" strokeLinecap="round"/>
+                    <line x1="50" y1="140" x2="150" y2="60" stroke="url(#footerLogoGrad)" strokeWidth="12" strokeLinecap="round"/>
+                  </g>
+                </svg>
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
                 NEXIUM-AI

@@ -22,25 +22,35 @@ export default function NexiumLogo({ size = 'md', animated = true, className = '
       <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full blur-md opacity-50 animate-pulse-slow"></div>
       
       {/* Main logo container */}
-      <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-primary-400 glow-green bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
-        {/* Nexium 'N' letter */}
+      <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-primary-400 glow-green bg-dark-950 flex items-center justify-center">
+        {/* Nexium SVG Logo */}
         <svg
-          viewBox="0 0 100 100"
-          className="w-3/4 h-3/4"
+          viewBox="0 0 200 200"
+          className="w-4/5 h-4/5"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Modern "N" design with tech feel */}
-          <path
-            d="M20 80 L20 20 L35 20 L65 60 L65 20 L80 20 L80 80 L65 80 L35 40 L35 80 Z"
-            fill="currentColor"
-            className="text-white drop-shadow-lg"
-          />
-          {/* Circuit pattern overlay */}
-          <circle cx="50" cy="20" r="3" fill="currentColor" className="text-primary-200 opacity-50" />
-          <circle cx="50" cy="80" r="3" fill="currentColor" className="text-primary-200 opacity-50" />
-          <line x1="50" y1="20" x2="50" y2="35" stroke="currentColor" strokeWidth="1" className="text-primary-300 opacity-30" />
-          <line x1="50" y1="65" x2="50" y2="80" stroke="currentColor" strokeWidth="1" className="text-primary-300 opacity-30" />
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#22d3ee', stopOpacity: 1 }} />
+              <stop offset="50%" style={{ stopColor: '#06b6d4', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#0891b2', stopOpacity: 1 }} />
+            </linearGradient>
+          </defs>
+          {/* N Shape with gradient */}
+          <g>
+            {/* Left vertical line */}
+            <line x1="50" y1="140" x2="50" y2="60" stroke="url(#logoGrad)" strokeWidth="12" strokeLinecap="round"/>
+            {/* Right vertical line */}
+            <line x1="150" y1="60" x2="150" y2="140" stroke="url(#logoGrad)" strokeWidth="12" strokeLinecap="round"/>
+            {/* Diagonal connector */}
+            <line x1="50" y1="140" x2="150" y2="60" stroke="url(#logoGrad)" strokeWidth="12" strokeLinecap="round"/>
+          </g>
+          {/* Corner accent dots */}
+          <circle cx="30" cy="30" r="3" fill="#22d3ee" opacity="0.8"/>
+          <circle cx="170" cy="35" r="3" fill="#22d3ee" opacity="0.8"/>
+          <circle cx="35" cy="170" r="3" fill="#22d3ee" opacity="0.8"/>
+          <circle cx="165" cy="165" r="3" fill="#22d3ee" opacity="0.8"/>
         </svg>
 
         {/* Rotating ring effect */}

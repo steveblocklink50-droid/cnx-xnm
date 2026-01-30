@@ -39,12 +39,28 @@ export default function Navbar() {
               whileHover={{ scale: 1.1, rotate: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              {/* Use the Nexium logo */}
+              {/* Nexium Logo with cyan glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full blur-md opacity-50 animate-pulse"></div>
-              <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-primary-400 glow-green">
-                <div className="w-full h-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">N</span>
-                </div>
+              <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-primary-400 glow-green bg-dark-950 flex items-center justify-center">
+                <svg
+                  viewBox="0 0 200 200"
+                  className="w-3/4 h-3/4"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient id="navLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style={{ stopColor: '#22d3ee', stopOpacity: 1 }} />
+                      <stop offset="100%" style={{ stopColor: '#0891b2', stopOpacity: 1 }} />
+                    </linearGradient>
+                  </defs>
+                  {/* N Shape */}
+                  <g>
+                    <line x1="50" y1="140" x2="50" y2="60" stroke="url(#navLogoGrad)" strokeWidth="12" strokeLinecap="round"/>
+                    <line x1="150" y1="60" x2="150" y2="140" stroke="url(#navLogoGrad)" strokeWidth="12" strokeLinecap="round"/>
+                    <line x1="50" y1="140" x2="150" y2="60" stroke="url(#navLogoGrad)" strokeWidth="12" strokeLinecap="round"/>
+                  </g>
+                </svg>
               </div>
             </motion.div>
             <motion.span 
