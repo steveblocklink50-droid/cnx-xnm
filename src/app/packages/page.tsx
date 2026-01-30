@@ -33,25 +33,7 @@ export default function PackagesPage() {
     console.log('Purchasing package:', { packageId, amount, paymentMethod, address });
     alert(`Purchase initiated for ${PACKAGES[packageId].name} with ${paymentMethod.toUpperCase()}`);
   };
-    {
-      id: 4,
-      name: 'Package IV',
-      amount: 1000,
-      dailyROI: '1%',
-      maxReturn: '2×',
-      features: [
-        '$10/day ROI',
-        '10% Direct Referral Bonus',
-        '5% Matching Bonus',
-        'VIP benefits',
-      ],
-    },
-  ];
 
-  const handlePurchase = (pkg: typeof packages[0]) => {
-    setSelectedPackage(pkg.id);
-    // Purchase logic here
-  };
 
   return (
     <div className="min-h-screen bg-dark-950">
